@@ -11,17 +11,14 @@ public class FullPyramid {
 
         int n = 4;
 
-        for (int i = 0; i < n; i++) {
-            int k = 0;
-            for (int j = 0; j < ((2 * n) - 1); j++) {
-                if (j < n - i - 1) {
-                    System.out.print(" ");
-                } else if (k < 2 * i + 1) {
-                    System.out.print("*");
-                    k++;
-                } else {
-                    System.out.print(" ");
-                }
+        for(int row=0;row<n;row++){
+            //space
+            for(int col=0;col<n-row-1;col++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int col=0;col<row+1;col++){
+                System.out.print("* ");
             }
             System.out.println();
         }

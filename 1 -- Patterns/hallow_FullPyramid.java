@@ -11,24 +11,21 @@ public class hallow_FullPyramid {
 
         int n=6;
 
-        for (int i = 0; i < n; i++) {
-            int k = 0;
-            for (int j = 0; j < ((2 * n) - 1); j++) {
-                if (j < n - i - 1) {
-                    System.out.print(" ");
-                } else if (k < 2 * i + 1) {
-                    if(k==0 || k==2*i || i==n-1){
-                        System.out.print("*");
-                    }
-                    else{
-                        System.out.print(" ");
-                    }           
-                    k++;
-                } else {
+        for(int row=0;row<n;row++){
+            // space
+            for(int col=0;col<n-row-1;col++){
+                System.out.print(" ");
+            }
+            for(int col=0;col<row+1;col++){
+                // for first and last col
+                if(col==0 || col==row){
+                    System.out.print("*");
+                }
+                else{
                     System.out.print(" ");
                 }
             }
-            System.out.println();
+            System.out.println();     
         }
     }
 }
