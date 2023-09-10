@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    // For checking address
+    // For checking address ( & )
     int a;
     cout<<&a<<endl;
 
@@ -20,13 +20,18 @@ int main(){
     int arrr[]={1,2,3,4,5};
     int arrrr[5]={1,2,3,4,5};
 
-    for(int i=1;i<=5;i++){
-        arr[i]=i;
+    // Taking input from the user and storing in array
+    for(int i=0;i<5;i++){
+        cout<< "Enter the "<< i << " element : " ;
+        cin>> arr[i];
     }
 
-    for(int i=0;i<=5;i++){
-        cout<< arr[i];
+    // Printing the array through iteration 
+    for(int i=0;i<5;i++){
+        cout<< arr[i]<<" ";
     }
     cout<<endl;
+
+    // Formula for arr[i]=Value At(Base address + (Data type size * index))
 
 }
