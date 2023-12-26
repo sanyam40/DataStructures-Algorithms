@@ -12,8 +12,7 @@ void ans(string &str,int i){
         swap(str[i],str[j]);
         ans(str,i+1);
         // Backtracking 
-        // to revert the changes to orignal string
-        swap(str[i],str[j]);  // bcoz in by refernce string changes 
+        swap(str[i],str[j]);  // bcoz in by refernce actual string changes to revert the changes to orignal string
         // recursive call se wapis aate hue jo operation hote h usse backtracking bolte h.
     }
 }

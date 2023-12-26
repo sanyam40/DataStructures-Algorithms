@@ -16,10 +16,10 @@ void quickSort(int arr[],int size,int start,int end){
         }
         j++;
     }
-    i++;
-    swap(arr[i],arr[pivot]);
-    quickSort(arr,5,start,i-1);
-    quickSort(arr,5,i+1,end);
+    i++;  // TO GET THE ACCURATE POSITION OF PIVOT ELEMENET
+    swap(arr[i],arr[pivot]); // TO SWAP AND PLACE ON CORRECT POS.
+    quickSort(arr,5,start,i-1); // AB LEFT PART MAI JO CHOTE ELEMETNS HONGE PIVOT SE UNKO SORT KAREGA
+    quickSort(arr,5,i+1,end); // SAME AS LEFT FOR RIGHT
 }
 
 int main(){
