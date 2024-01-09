@@ -1,3 +1,11 @@
+/*
+
+Q.Can contructor and destructor be private?
+Ans. Yes, but it will not be accessible outside the class. So, we cannot create an object of that class.
+But via friend class we can access the private constructor and destructor.
+
+*/
+
 #include <iostream>
 using namespace std;
 
