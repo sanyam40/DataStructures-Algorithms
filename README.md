@@ -1,6 +1,6 @@
 # Data Structures and Algorithms 2.0
 
-Welcome to the Data Structures and Algorithms 2.0 repository! This repository is a collection of various data structures and algorithms implemented in C++. 
+Welcome to the Data Structures and Algorithms 2.0 repository! This repository is a collection of various data structures and algorithms implemented in C++
 
 ## LeetCode Profile
 
