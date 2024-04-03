@@ -133,14 +133,11 @@ void printRightBoundary(Node* root){
 
 void boundaryTraversal(Node* root){
     if(root==NULL) return;
-    printLeftBoundary(root);
-    printLeafBoundary(root);
-    if(root->right!=NULL){
-        printRightBoundary(root->right);
-    }
-    else{
-        printRightBoundary(root->left);
-    }
+    cout<<root->data<<" ";
+    printLeftBoundary(root->left);
+    printLeafBoundary(root->left);
+    printLeafBoundary(root->right);
+    printRightBoundary(root->right); 
 }
 
 // 10 20 40 -1 -1 50 70 110 -1 -1 111 -1 -1 80 -1 -1 30 -1 60 -1 90 112 -1 -1 113 -1  -1
