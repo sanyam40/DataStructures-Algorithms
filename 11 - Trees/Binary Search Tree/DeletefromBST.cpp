@@ -55,7 +55,7 @@ Node* deleteFromBST(Node* root,int target){
     if(root->data==target){
         // 4 cases
 
-        // 1 case -> leafe Node
+        // 1 case -> leaf Node
         if(root->left==NULL && root->right==NULL){
             delete root;
             return NULL;
