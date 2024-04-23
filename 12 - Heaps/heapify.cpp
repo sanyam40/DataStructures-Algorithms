@@ -34,35 +34,34 @@ class Heap{
             else break;
         }
     }
-// TC = O(logn)
-    int deletion(){
-        int ans=arr[1];
-        arr[1]=arr[size];
-        size--;
 
-        int index=1;
-        while(index<size){
-            int leftIndex=2*index;
-            int rightIndex=2*index+1;
+    void heapify(int *arr,int n,int index){
+        int leftIndex=2*index;
+        int rightIndex=2*index+1;
+        int largest=index;
 
-            int largest=index;
-
-            if(leftIndex<=size && arr[largest]<arr[leftIndex]){
-                largest=leftIndex;
-            }
-            if(rightIndex<=size && arr[largest]<arr[rightIndex]){
-                largest=rightIndex;
-            }
-
-            if(index==largest){
-                break;
-            }
-            else {
-                swap(arr[index],arr[largest]);
-                index=largest;
-            }
+        // teeno se max element ke liye
+        if(leftIndex<=n && arr[leftIndex]>arr[largest]){
+            largest=leftIndex;
         }
-        return ans;
+
+        if(rightIndex<=n && arr[rightIndex]>arr[largest]){
+            largest=rightIndex;
+        }
+
+        if(index!=largest){
+            swap(arr[index],arr[largest]);
+            index=largest;
+            heapify(arr,n,index);
+        }
+    }
+
+    // Build Heap from Array
+    // TC : O(N)
+    void buildHeap(int arr[],int n){
+        for(int index=n/2;index<0;index--){
+            heapify(arr,n,index);
+        }
     }
 
     // Function to access elements by index
@@ -88,14 +87,8 @@ int main(){
         cout<<h[i]<<" ";
     }
 
-    cout << endl << h.deletion() << endl;
 
     for(int i=1;i<=h.size;i++){ 
         cout<<h[i]<<" ";
     }
 }
-
-
-
-
-
