@@ -34,6 +34,36 @@ class Heap{
         }
     }
 
+    int deletion(){
+        int ans=arr[1];
+        arr[1]=arr[size];
+        size--;
+
+        int index=1;
+        while(index<size){
+            int leftIndex=2*index;
+            int rightIndex=2*index+1;
+
+            int largest=index;
+
+            if(leftIndex<=size && arr[largest]<arr[leftIndex]){
+                largest=leftIndex;
+            }
+            if(rightIndex<=size && arr[largest]<arr[rightIndex]){
+                largest=rightIndex;
+            }
+
+            if(index==largest){
+                break;
+            }
+            else {
+                swap(arr[index],arr[largest]);
+                index=largest;
+            }
+        }
+        return ans;
+    }
+
     // Function to access elements by index
     int operator[](int index){
         if(index >= 1 && index <= size)
@@ -52,6 +82,12 @@ int main(){
     h.insert(5);
     h.insert(11);
     h.insert(6);
+
+    for(int i=1;i<=h.size;i++){ 
+        cout<<h[i]<<" ";
+    }
+
+    cout << endl << h.deletion();
 
     for(int i=1;i<=h.size;i++){ 
         cout<<h[i]<<" ";
