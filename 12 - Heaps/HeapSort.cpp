@@ -103,7 +103,7 @@ int main()
     int arr[] = {-1, 5, 10, 15, 20, 25, 12};
     Heap heap(6); // Creating Heap object
 
-    heap.buildHeap(arr, 6); // Calling buildHeap through the Heap object
+    heap.buildHeap(arr, 6); 
 
     for (int i = 1; i <= 6; i++)
     {
@@ -111,7 +111,7 @@ int main()
     }
     cout << endl;
 
-    heap.heapSort(arr, 6); // Calling heapSort through the Heap object
+    heap.heapSort(arr, 6);
 
     for (int i = 1; i <= 6; i++)
     {
