@@ -54,7 +54,7 @@ class Heap{
                 largest=rightIndex;
             }
 
-            if(index==largest){
+            if(index==largest){ // Already the largest
                 break;
             }
             else {
